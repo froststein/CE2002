@@ -1,3 +1,4 @@
+package Lab1;
 import java.util.Scanner;
 public class P3 {
 	private static final double RATE=1.82;
