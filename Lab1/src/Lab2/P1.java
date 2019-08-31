@@ -43,6 +43,7 @@ public class P1 {
 	}
 	
 	private static void mulTest() {
+		@SuppressWarnings("resource") 
 		Scanner sc=new Scanner(System.in);
 		int temp1,temp2,correctCounter=0;
 		for(int i=0;i<5;i++) {
