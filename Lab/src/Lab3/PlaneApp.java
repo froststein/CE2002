@@ -38,6 +38,8 @@ public class PlaneApp {
 				int cust_id=sc.nextInt();
 				
 				break;
+			case 6:
+				break;
 			}
 			
 		}while(choice<7);
