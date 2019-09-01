@@ -51,7 +51,6 @@ public class P1 {
 			temp2=(int)(Math.random()*9)+1;
 			System.out.print(String.format("How much is %d times %d ? ",temp1,temp2));
 			int ans=sc.nextInt();
-			
 			if(ans == (temp1*temp2))
 				correctCounter++;
 			
