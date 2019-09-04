@@ -29,6 +29,8 @@ public class PlaneApp {
 				p.showAssignedSeats(true);
 				break;
 			case 4:
+				System.out.println("The seat assignments are as follow: ");
+				p.showAssignedSeats(false);
 				break;
 			case 5:
 				System.out.println("Assigning Seat...");
@@ -36,9 +38,12 @@ public class PlaneApp {
 				int seatid=sc.nextInt();
 				System.out.print("Plese enter CustomerID: ");
 				int cust_id=sc.nextInt();
-				
+				p.assignSeat(seatid, cust_id);
 				break;
 			case 6:
+				System.out.print("Enter SeatID to unassign customer from: ");
+				int unseatid=sc.nextInt();
+				p.unAssignSeat(unseatid);
 				break;
 			}
 			
