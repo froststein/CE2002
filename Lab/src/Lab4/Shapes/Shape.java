@@ -1,5 +1,6 @@
 package Lab4.Shapes;
 
-public class Shape {
-
+public abstract class Shape {
+	public abstract double getArea();
+	public abstract void getDimensions();
 }

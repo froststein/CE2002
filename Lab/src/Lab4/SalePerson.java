@@ -32,6 +32,9 @@ public class SalePerson implements Comparable {
 		// Check if o is a saleperson obj
 		if(o.getClass() == this.getClass()) {
 			SalePerson sp = (SalePerson)o;
+			/* checks if the first name and last name of both obj matches
+			* if it does, return true
+			* */
 			return (this.firstName == sp.getFirstNme() && this.lastName == sp.getLastName());
 		}
 		return false;
