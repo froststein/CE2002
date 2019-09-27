@@ -19,6 +19,7 @@ public class Circle extends Shape{
 
 	@Override
 	public void getDimensions() {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Radius: ");
 		this.radius=sc.nextDouble();

@@ -21,24 +21,24 @@ public class Shape2DApp {
 			
 			switch(choice) {
 			case 1:
-				Circle c=new Circle();
-				c.getDimensions();
-				sList[i]=c;
+				Circle cir=new Circle();
+				cir.getDimensions();
+				sList[i]=cir;
 				break;
 			case 2:
-				Triangle t=new Triangle();
-				t.getDimensions();
-				sList[i]=t;
+				Triangle tri=new Triangle();
+				tri.getDimensions();
+				sList[i]=tri;
 				break;
 			case 3:
-				Rectangle s=new Rectangle();
-				s.getDimensions();
-				sList[i]=s;
+				Rectangle sq=new Rectangle();
+				sq.getDimensions();
+				sList[i]=sq;
 				break;
 			case 4:
-				Rectangle r=new Rectangle();
-				r.getDimensions();
-				sList[i]=r;
+				Rectangle rec=new Rectangle();
+				rec.getDimensions();
+				sList[i]=rec;
 				break;			
 			}
 			
