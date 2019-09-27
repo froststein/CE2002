@@ -14,6 +14,7 @@ public class Triangle extends Shape {
 
 	@Override
 	public void getDimensions() {
+		@SuppressWarnings("resource")
 		Scanner sc=new Scanner(System.in);
 		System.out.print("Enter height: ");
 		this.height=sc.nextDouble();
