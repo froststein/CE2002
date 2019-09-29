@@ -4,6 +4,7 @@ public class CalculatorEx {
 	public CalculatorEx(){
 		System.out.println("Calculator is on");
 		doCalculation();
+		System.out.println("End of Program");
 	}
 
 	public double resultValue() {
@@ -18,16 +19,23 @@ public class CalculatorEx {
 		do {
 			System.out.printf("result = %.2f \n",result);
 			op=sc.next().charAt(0);
+			if(op == 'Q' || op == 'q') 
+				break;
 			n2=sc.nextDouble();
-
-			result=evaluate(op,result,n2);
+			
+			try {
+				result=evaluate(op,result,n2);
+			} catch (UnknownOperatorException e) {
+				result=handleUnknownOpException();
+			}
 			System.out.printf("updated result = %.2f \n",result);
 
-		}while(op != 'Q' || op != 'q');
-		
+		}while(true);
+		sc.close();
+		System.out.println("Final result= "+result);
 	}
 
-	public double evaluate(char op, double n1, double n2) {
+	public double evaluate(char op, double n1, double n2) throws UnknownOperatorException{
 		switch(op) {
 		case '+':
 			n1+=n2;
@@ -42,8 +50,9 @@ public class CalculatorEx {
 			n1/=n2;
 			return n1;
 		default:
-			return 0;
+			throw new UnknownOperatorException(op);
 		}
+
 	}
 
 	public double handleUnknownOpException() {
@@ -51,6 +60,7 @@ public class CalculatorEx {
 	}
 
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		CalculatorEx cal=new CalculatorEx();
 	}
 }

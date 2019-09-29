@@ -8,7 +8,7 @@ public class UnknownOperatorException extends Exception {
 
 	}
 	public UnknownOperatorException(char op) {
-
+		System.out.print(op + " is an unknown operator\n");
 	}
 	public UnknownOperatorException(String msg) {
 		super(msg);
